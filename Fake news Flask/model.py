@@ -15,6 +15,12 @@ def predict(query):
 
     # Set the query you want to search
     query = query
+    words=query.split()
+
+    if(len(words)>10):
+        words=words[0:11]
+
+    query=' '.join(words)
 
     # Set the number of results you want to retrieve
     num_results = 10
